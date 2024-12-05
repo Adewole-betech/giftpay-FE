@@ -29,3 +29,7 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+ul.ant-dropdown-menu.ant-dropdown-menu-vertical {
+  padding: 12px;
+}
