@@ -176,7 +176,6 @@ const Header = () => {
             </div>
           )}
         </div>
-
         {isMobile && (
           <Drawer
             title={
