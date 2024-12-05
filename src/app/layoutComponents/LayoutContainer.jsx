@@ -91,6 +91,7 @@ export default function AllProvider({ children }) {
                 colorPrimaryBgHover: "rgb(6,76,217)",
                 colorPrimaryTextHover: "rgb(6,76,217)",
                 colorLinkHover: "rgb(6,76,217)",
+                fontWeight: 500,
               },
               Table: {
                 headerBg: "rgb(249, 250, 251)",
