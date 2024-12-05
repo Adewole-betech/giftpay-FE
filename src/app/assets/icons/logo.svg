@@ -1,0 +1,10 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="gift-card">
+<path id="Vector" d="M2.66669 13.3333C2.66669 9.5621 2.66669 7.67649 3.83826 6.50492C5.00983 5.33334 6.89545 5.33334 10.6667 5.33334H21.3334C25.1046 5.33334 26.9902 5.33334 28.1618 6.50492C29.3334 7.67649 29.3334 9.5621 29.3334 13.3333V18.6667C29.3334 22.4379 29.3334 24.3235 28.1618 25.4951C26.9902 26.6667 25.1046 26.6667 21.3334 26.6667H10.6667C6.89545 26.6667 5.00983 26.6667 3.83826 25.4951C2.66669 24.3235 2.66669 22.4379 2.66669 18.6667V13.3333Z" stroke="#2970FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M8 13.2057C8 7.1465 16 13.3202 16 17.3333H11.3333C9.0176 17.3333 8 15.2932 8 13.2057Z" stroke="#2970FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M24 13.2057C24 7.1465 16 13.3202 16 17.3333H20.6667C22.9824 17.3333 24 15.2932 24 13.2057Z" stroke="#2970FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M16 5.33334V26.6667" stroke="#2970FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M2.66669 17.3333H29.3334" stroke="#2970FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M20 21.3333L16 17.3333L12 21.3333" stroke="#2970FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

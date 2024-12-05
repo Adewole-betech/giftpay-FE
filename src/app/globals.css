@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #101828;
+  --primary: #155eef;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: #101828;
+  font-family: var(--font-graphik);
+  height: 100vh;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scrollbar-color: rgba(0, 0, 0, 0);
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
