@@ -65,7 +65,7 @@ const Header = () => {
   };
 
   return (
-    <div className="flex w-full items-center justify-center h-fit sticky top-4 lg:top-6 2xl:top-8 font-graphik">
+    <div className="flex w-full items-center justify-center h-fit sticky top-4 lg:top-6 2xl:top-8 font-graphik z-20">
       <div className=" max-w-[1440px] w-full px-8 md:px-12 lg:px-20 2xl:px-28">
         <div className="flex items-center justify-between px-4 lg:px-6 2xl:px-8 py-3 lg:py-4 2xl:py-[1.125rem] bg-white shadow-lg rounded-lg lg:rounded-xl">
           <div className="flex items-center gap-3 lg:gap-4">

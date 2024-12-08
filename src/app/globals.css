@@ -33,3 +33,7 @@ body {
 ul.ant-dropdown-menu.ant-dropdown-menu-vertical {
   padding: 12px;
 }
+
+div.ant-segmented-group {
+  gap: 0.5rem;
+}

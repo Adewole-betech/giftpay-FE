@@ -23,6 +23,10 @@ export default function AllProvider({ children }) {
               fontFamily: "var(--font-graphik)",
             },
             components: {
+              Timeline: {
+                tailColor: "rgb(0,78,235)",
+                tailWidth: 4,
+              },
               Input: {
                 colorBorder: "rgb(208,213,221)",
                 colorError: "rgb(252, 165, 165)",
@@ -43,6 +47,7 @@ export default function AllProvider({ children }) {
                 paddingBlock: 10,
                 paddingInline: 12,
                 handleVisible: false,
+                fontSize: 16,
                 colorBorder: "rgb(209, 213, 219)",
                 colorError: "rgb(252, 165, 165)",
                 colorText: "rgb(17, 24, 39)",
