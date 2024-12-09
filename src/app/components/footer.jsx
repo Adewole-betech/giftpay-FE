@@ -9,16 +9,20 @@ const Footer = () => {
     <div className="flex flex-col items-center bg-[#101828] w-full">
       <div
         className={`flex flex-col items-center w-full max-w-[1440px] px-8 md:px-12 lg:px-20 2xl:px-28 text-white ${
-          window.location.pathname === "/" && "mt-60 md:mt-52"
+          (window.location.pathname === "/" ||
+            window.location.pathname === "/about") &&
+          "mt-60 md:mt-52"
         }`}
       >
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 lg:gap-16 py-8 md:pt-12 lg:pt-16 md:pb-10 lg:pb-12">
           <div className="flex flex-col md:w-1/2 gap-4 lg:gap-6 2xl:gap-8">
             <div className="flex items-center gap-3 lg:gap-4">
-              <Image alt="Gift pay logo" src={logo} width={isMobile ? 40 : 32} />
-              <p className="font-bold text-xl lg:text-2xl">
-                UGifty
-              </p>
+              <Image
+                alt="Gift pay logo"
+                src={logo}
+                width={isMobile ? 40 : 32}
+              />
+              <p className="font-bold text-xl lg:text-2xl">UGifty</p>
             </div>
             <p className="text-lg lg:text-xl lg:leading-[2rem] text-[#eaecf0]">
               Design amazing digital experiences that create more happy in the
