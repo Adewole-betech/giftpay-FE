@@ -153,6 +153,8 @@ export default function AllProvider({ children }) {
                 colorBorder: "rgb(234,236,240)",
                 colorTextHeading: "rgb(16,24,40)",
                 colorText: "rgb(102,112,133)",
+                contentPadding: "16px 4px 32px 16px!important",
+                headerPadding: "16px 16px",
               },
             },
           }}

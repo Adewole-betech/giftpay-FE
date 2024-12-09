@@ -145,10 +145,7 @@ const Header = () => {
                     </Space>
                   </a>
                 </Dropdown>
-                <Link
-                  href={"/frequent-questions"}
-                  className="hover:text-primary"
-                >
+                <Link href={"/faqs"} className="hover:text-primary">
                   FAQ
                 </Link>
                 <Link href={"/about"} className="hover:text-primary">
