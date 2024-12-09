@@ -17,6 +17,9 @@ module.exports = {
         textHead: "#101828",
         textBody: "#667085",
       },
+      // backgroundImage: {
+      //   home: "url('./src/app/assets/images/home/homepageBG.jpeg')",
+      // },
     },
   },
   plugins: [],
