@@ -14,7 +14,7 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: "#155EEF",
-        textHead: "#101828",
+        textHead: "#0f1728",
         textBody: "#667085",
       },
       // backgroundImage: {

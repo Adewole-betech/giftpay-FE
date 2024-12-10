@@ -4,6 +4,7 @@ import { Collapse } from "antd";
 import Header from "../components/header";
 import * as feather from "feather-icons/dist/feather";
 import parse from "html-react-parser";
+import Footer from "../components/footer";
 
 const Faqs = () => {
   return (
@@ -83,7 +84,19 @@ const Faqs = () => {
             },
           ]}
         />
+        <div className="bg-[#f5f8ff] rounded-xl lg:rounded-2xl p-4 md:p-6 lg:p-8 flex flex-col gap-1.5 lg:gap-2 items-center text-center w-full">
+          <p className="font-medium text-lg lg:text-xl lg:leading-[2rem] w-full text-textHead">
+            Still have questions?
+          </p>
+          <p className="text-textBody lg:text-lg lg:leading-[2rem] w-full">
+            Can’t find the answer you're looking for? Contact us via{" "}
+            <a className="text-primary" href="mailto:hello@ugifty.ng">
+              hello@ugifty.ng
+            </a>
+          </p>
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };
