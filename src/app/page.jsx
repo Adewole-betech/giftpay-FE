@@ -376,6 +376,7 @@ export default function Home() {
                 </Dropdown>
               </div>
               <Button
+                href="/gift-card/deals/find"
                 type="primary"
                 size="large"
                 className="md:w-fit lg:h-full"
@@ -623,7 +624,7 @@ export default function Home() {
                   },
                 ]}
               />
-              <Button type="primary" size="large">
+              <Button href="/gift-card/deals/find" type="primary" size="large">
                 Find Your Deal
               </Button>
             </div>
@@ -827,6 +828,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-2 lg:gp-3">
                 <Button
+                  href="/gift-card/deals/sell"
                   size={isMobile ? "default" : "large"}
                   className="bg-white text-[#344054] hover:!bg-white hover:!text-primary"
                   type="primary"
@@ -834,6 +836,7 @@ export default function Home() {
                   Sell Now
                 </Button>
                 <Button
+                  href="/gift-card/deals/find"
                   size={isMobile ? "default" : "large"}
                   className="bg-white text-[#344054] hover:!bg-white hover:!text-primary"
                   type="primary"

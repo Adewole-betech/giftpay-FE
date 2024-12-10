@@ -37,3 +37,7 @@ ul.ant-dropdown-menu.ant-dropdown-menu-vertical {
 div.ant-segmented-group {
   gap: 0.5rem;
 }
+
+span.ant-input-wrapper > span.ant-input-group-addon {
+  background: white;
+}

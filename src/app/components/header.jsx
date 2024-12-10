@@ -15,7 +15,10 @@ const items = [
   {
     key: "1",
     label: (
-      <Link href={""} className="flex items-center gap-3 lg:gap-4 p-2 lg:p-3">
+      <Link
+        href={"/gift-card/deals/find"}
+        className="flex items-center gap-3 lg:gap-4 p-2 lg:p-3"
+      >
         <div className="flex items-center justify-center bg-[#D1E0FF] p-2 lg:p-3 rounded-lg">
           {parse(
             feather.icons["shopping-cart"].toSvg({
@@ -35,7 +38,10 @@ const items = [
   {
     key: "2",
     label: (
-      <Link href={""} className="flex items-center gap-3 lg:gap-4 p-2 lg:p-3">
+      <Link
+        href={"/gift-card/deals/sell"}
+        className="flex items-center gap-3 lg:gap-4 p-2 lg:p-3"
+      >
         <div className="flex items-center justify-center bg-[#D1E0FF] p-2 lg:p-3 rounded-lg">
           {parse(
             feather.icons["tag"].toSvg({
