@@ -2,11 +2,29 @@
 
 import Footer from "@/app/components/footer";
 import Header from "@/app/components/header";
-import { Button, Checkbox, Collapse, Input, Segmented, Select } from "antd";
+import {
+  Button,
+  Checkbox,
+  Collapse,
+  Drawer,
+  Input,
+  Segmented,
+  Select,
+} from "antd";
 import * as feather from "feather-icons/dist/feather";
 import parse from "html-react-parser";
+import Image from "next/image";
+import { useState } from "react";
 
 const FindDeals = () => {
+  const [open, setOpen] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
+
   return (
     <div className="flex flex-col items-center h-screen overflow-y-auto overflow-x-clip relative w-full">
       <Header />
@@ -52,8 +70,8 @@ const FindDeals = () => {
         </div>
       </div>
       <div className="flex flex-col w-full max-w-[1440px] px-8 md:px-12 lg:px-20 2xl:px-28 py-8 md:py-12 lg:py-16 2xl:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-6 2xl:gap-8 relative max-h-screen">
-          <div className="flex flex-col gap-3 md:gap-4 lg:gap-5 sticky left-0 top-0 w-full col-span-full md:col-span-3 lg:col-span-4 2xl:col-span-3">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-6 2xl:gap-8 relative">
+          <div className="hidden md:flex flex-col gap-3 md:gap-4 lg:gap-5 sticky left-0 top-32 w-full col-span-full md:col-span-3 lg:col-span-4 2xl:col-span-3 h-fit">
             <div className="flex flex-col">
               <Collapse
                 expandIconPosition="end"
@@ -154,7 +172,7 @@ const FindDeals = () => {
             </div>
           </div>
           <div className="flex flex-col gap-3 lg:gap-4 2xl:gap-6 col-span-full md:col-span-9 lg:col-span-8 2xl:col-span-9">
-            <div className="flex overflow-y-auto border no-scrollbar rounded-md lg:rounded-lg w-full xl:w-fit lg:self-center">
+            <div className="flex overflow-x-auto border no-scrollbar rounded-md lg:rounded-lg w-full xl:w-fit lg:self-center">
               <Segmented
                 size="large"
                 className="font-medium lg:w-fit gap-2"
@@ -256,9 +274,14 @@ const FindDeals = () => {
                 ]}
               />
             </div>
+            <div className="flex md:hidden w-full justify-end">
+              <Button type="link" onClick={showDrawer}>
+                Show Filters
+              </Button>
+            </div>
             <div className="flex flex-col gap-4 md:gap-6 lg:gap-8 2xl:gap-10">
               <div className="flex flex-col gap-4 lg:gap-6 2xl:gap-8">
-                <div className="flex flex-col md:flex-row items-center md:justify-between gap-2">
+                <div className="flex items-center  justify-between gap-2 w-full">
                   <p className="text-2xl xl:text-3xl font-semibold text-textHead">
                     Adidas Gift card
                   </p>
@@ -602,6 +625,110 @@ const FindDeals = () => {
           </div>
         </div>
       </div>
+      <Drawer
+        title={"Apply filters"}
+        placement={"bottom"}
+        onClose={onClose}
+        open={open}
+        rootClassName="h-4/5"
+      >
+        <div className="flex flex-col">
+          <Collapse
+            expandIconPosition="end"
+            expandIcon={({ isActive }) => (
+              <span>
+                {parse(
+                  feather.icons["chevron-down"].toSvg({
+                    class: `size-5 transition-all duration-1000 ${
+                      isActive ? "-rotate-180" : "rotate-0"
+                    }`,
+                  })
+                )}
+              </span>
+            )}
+            // size="large"
+            defaultActiveKey={["1", "2", "3", "4"]}
+            bordered={false}
+            className="w-full"
+            items={[
+              {
+                key: "1",
+                label: <p className="font-medium">Brand</p>,
+                children: (
+                  <Checkbox.Group
+                    options={[
+                      { label: "Adidas", value: "adidas" },
+                      { label: "Amazon", value: "amazon" },
+                      { label: "Apple", value: "apple" },
+                      { label: "Best Buy", value: "best buy" },
+                      { label: "Ebay", value: "ebay" },
+                      { label: "EB Games", value: "eb games" },
+                      { label: "Microsoft", value: "microsoft" },
+                    ]}
+                    className="gap-2 lg:gap-3 flex-col"
+                  ></Checkbox.Group>
+                ),
+              },
+              {
+                key: "2",
+                label: <p className="font-medium">Condition</p>,
+                children: (
+                  <Checkbox.Group
+                    options={[
+                      { label: "New", value: "new" },
+                      { label: "Lightly Used", value: "lightly used" },
+                      { label: "Used", value: "used" },
+                      { label: "Not Specified", value: "" },
+                    ]}
+                    className="gap-2 lg:gap-3 flex-col"
+                  />
+                ),
+              },
+              {
+                key: "3",
+                label: <p className="font-medium">Validity</p>,
+                children: (
+                  <Checkbox.Group
+                    options={[
+                      { label: "1 Month", value: "1 month" },
+                      { label: "3 Months", value: "1 months" },
+                      { label: "6 Months", value: "6 months" },
+                      { label: "1 year", value: "12 months" },
+                    ]}
+                    className="gap-2 lg:gap-3 flex-col"
+                  />
+                ),
+              },
+              {
+                key: "4",
+                label: <p className="font-medium">Price</p>,
+                children: (
+                  <>
+                    <Checkbox.Group
+                      options={[
+                        { label: "Below $10", value: "0-10" },
+                        { label: "$10 - $50", value: "10-50" },
+                        { label: "$50 - $100", value: "50-100" },
+                      ]}
+                      className="gap-2 lg:gap-3 flex-col"
+                    />
+                    <div className="flex items-center justify-between mt-2 lg:mt-3 gap-1 lg:gap-2">
+                      <Input prefix="$" />
+                      <p className="text-sm lg:text-base text-textBody">to</p>
+                      <Input prefix="$" />
+                    </div>
+                  </>
+                ),
+              },
+            ]}
+          />
+          <div className="flex pt-3 lg:pt-4 2xl:pt-5 border-t">
+            <Button size="large" type="primary" className="w-full">
+              Find Offers
+            </Button>
+          </div>
+        </div>
+      </Drawer>
       <Footer />
     </div>
   );
