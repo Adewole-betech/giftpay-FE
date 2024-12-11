@@ -37,15 +37,15 @@ const CardDetails = () => {
             </span>
             <p className="text-xs md:text-sm text-primary">Apple Itunes</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-12 2xl:gap-16 w-full no-scrollbar relative">
-            <div className="flex flex-col gap-4 lg:gap-6 2xl:gap-8 col-span-full md:col-span-6 lg:col-span-7">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-12 2xl:gap-16 w-full no-scrollbar relative">
+            <div className="flex flex-col gap-4 lg:gap-6 2xl:gap-8 col-span-full lg:col-span-7">
               <div className="flex flex-col gap-4 lg:gap-6 2xl:gap-8">
                 <Carousel
                   autoplay={true}
                   draggable
                   dotsClass="slick-dots slick-thumb"
                   appendDots={(dots) => (
-                    <div className="w-full1">
+                    <div className="w-full">
                       <ul className="w-full grid grid-cols-4 justify-center gap-3 relative -bottom-6">
                         {dots}
                       </ul>
@@ -57,7 +57,7 @@ const CardDetails = () => {
                     return (
                       <a
                         style={{ backgroundImage: `url(${src})` }}
-                        className={`bg-cover bg-no-repeat bg-center w-full h-32 rounded-md flex`}
+                        className={`bg-cover bg-no-repeat bg-center w-full h-20 md:h-28 xl:h-32 rounded-md flex`}
                       ></a>
                       // <a className="w-1/3">
                       //   <img
@@ -69,11 +69,103 @@ const CardDetails = () => {
                     );
                   }}
                 >
-                  <div className="w-full h-[30rem] rounded-xl bg-cover bg-no-repeat bg-center bg-[url('./assets/images/cards/cards.png')]"></div>
-                  <div className="w-full h-[30rem] rounded-xl bg-cover bg-no-repeat bg-center bg-[url('./assets/images/cards/adidasCard.png')]"></div>
-                  <div className="w-full h-[30rem] rounded-xl bg-cover bg-no-repeat bg-center bg-[url('./assets/images/home/giftcard.jpeg')]"></div>
+                  <div className="w-full h-72 md:h-96 xl:h-[30rem] rounded-xl bg-cover bg-no-repeat bg-center bg-[url('./assets/images/cards/cards.png')]"></div>
+                  <div className="w-full h-72 md:h-96 xl:h-[30rem] rounded-xl bg-cover bg-no-repeat bg-center bg-[url('./assets/images/cards/adidasCard.png')]"></div>
+                  <div className="w-full h-72 md:h-96 xl:h-[30rem] rounded-xl bg-cover bg-no-repeat bg-center bg-[url('./assets/images/home/giftcard.jpeg')]"></div>
                 </Carousel>
-                <div className="flex flex-col gap-2 lg:gap-3 mt-32">
+                <div className="flex lg:hidden flex-col gap-4 lg:gap-6 2xl:gap-8 mt-32">
+                  <div className="flex flex-col gap-2.5 lg:gap-3 2xl:gap-4">
+                    <div className="flex flex-col gap-1.5 lg:gap-2">
+                      <p className="text-2xl lg:text-3xl 2xl:text-4xl font-semibold text-textHead">
+                        Apple Itunes Digital Gift Card for $10 Value
+                      </p>
+                      <p className="lg:text-lg 2xl:text-xl text-textBody">
+                        Define every aspect of your gift card—type, face value,
+                        condition, validity, and your selling price. Showcase
+                        premium listings that stand out to discerning buyers.
+                      </p>
+                      <div className="flex items-center">
+                        <span className="text-[0.5rem] md:text-xs 2xl:text-sm font-bold">
+                          $
+                        </span>
+                        <span className="font-semibold text-xl lg:text-2xl 2xl:text-3xl">
+                          59
+                        </span>
+                        <span className="text-[0.5rem] md:text-xs 2xl:text-sm font-bold">
+                          .99
+                        </span>
+                      </div>
+                    </div>
+                    <Divider className="m-0" />
+                    <div className="flex flex-col gap-2.5 lg:gap-3 2xl:gap-4">
+                      <p className="text-textHead text-sm lg:text-base font-medium">
+                        Seller Information
+                      </p>
+                      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2">
+                        <div className="flex gap-2 lg:gap-3 2xl:gap-4 items-center">
+                          <Badge dot="show" status="success" offset={[-10, 56]}>
+                            <Avatar size={64} />
+                          </Badge>
+                          <div className="flex flex-col gap-0.5">
+                            <p className="text-[#344054] lg:text-lg font-medium">
+                              Bessie Payne
+                            </p>
+                            <Rate disabled value={4} />
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2 lg:gap-3">
+                          <Button size="large">
+                            <Image src={whatsapp} alt="Whatsapp" />
+                          </Button>
+                          <Button size="large">
+                            <Image src={telegram} alt="Telegram" />
+                          </Button>
+                          <Button size="large">
+                            {parse(
+                              feather.icons["more-horizontal"].toSvg({
+                                class: "",
+                              })
+                            )}
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                    <Divider className="m-0" />
+                    <div className="flex flex-col gap-1.5 lg:gap-2">
+                      <p className="text-textHead text-sm lg:text-base font-medium">
+                        Brand
+                      </p>
+                      <p className="text-textBody text-sm lg:text-base">
+                        Adidas
+                      </p>
+                    </div>
+                    <Divider className="m-0" />
+                    <div className="flex flex-col gap-1.5 lg:gap-2">
+                      <p className="text-textHead text-sm lg:text-base font-medium">
+                        Condition
+                      </p>
+                      <p className="text-textBody text-sm lg:text-base">Used</p>
+                    </div>
+                    <Divider className="m-0" />
+                    <div className="flex flex-col gap-1.5 lg:gap-2">
+                      <p className="text-textHead text-sm lg:text-base font-medium">
+                        Validity
+                      </p>
+                      <p className="text-textBody text-sm lg:text-base">
+                        6 months
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex lg:flex-col gap-2 lg:gap-3 w-full">
+                    <Button type="primary" size="large" className="w-full">
+                      Make Payment
+                    </Button>
+                    <Button size="large" className="w-full">
+                      Message Seller
+                    </Button>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-2 lg:gap-3 lg:mt-32">
                   <p className="text-textHead lg:text-lg xl:text-xl font-medium">
                     Description from Seller
                   </p>
@@ -265,7 +357,7 @@ const CardDetails = () => {
                 </div>
               </div>
             </div>
-            <div className="hidden md:flex flex-col gap-4 lg:gap-6 2xl:gap-8 col-span-full md:col-span-6 lg:col-span-5 sticky right-0 top-32">
+            <div className="hidden lg:flex flex-col gap-4 lg:gap-6 2xl:gap-8 col-span-full lg:col-span-5 sticky right-0 top-32 h-fit">
               <div className="flex flex-col gap-2.5 lg:gap-3 2xl:gap-4">
                 <div className="flex flex-col gap-1.5 lg:gap-2">
                   <p className="text-2xl lg:text-3xl 2xl:text-4xl font-semibold text-textHead">
@@ -293,7 +385,7 @@ const CardDetails = () => {
                   <p className="text-textHead text-sm lg:text-base font-medium">
                     Seller Information
                   </p>
-                  <div className="flex items-center justify-between gap-2">
+                  <div className="flex lg:flex-col xl:flex-row items-center lg:items-start xl:items-center justify-between gap-2">
                     <div className="flex gap-2 lg:gap-3 2xl:gap-4 items-center">
                       <Badge dot="show" status="success" offset={[-10, 56]}>
                         <Avatar size={64} />
