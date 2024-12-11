@@ -13,16 +13,15 @@ import {
 } from "antd";
 import * as feather from "feather-icons/dist/feather";
 import parse from "html-react-parser";
-import Image from "next/image";
 import { useState } from "react";
 
 const FindDeals = () => {
-  const [open, setOpen] = useState(false);
+  const [openFilter, setOpenFilter] = useState(false);
   const showDrawer = () => {
-    setOpen(true);
+    setOpenFilter(true);
   };
   const onClose = () => {
-    setOpen(false);
+    setOpenFilter(false);
   };
 
   return (
@@ -629,7 +628,7 @@ const FindDeals = () => {
         title={"Apply filters"}
         placement={"bottom"}
         onClose={onClose}
-        open={open}
+        openFilter={openFilter}
         rootClassName="h-4/5"
       >
         <div className="flex flex-col">

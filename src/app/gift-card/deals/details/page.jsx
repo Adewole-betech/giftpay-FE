@@ -12,10 +12,22 @@ import Image from "next/image";
 import card from "@/app/assets/images/cards/cards.png";
 import adidasCard from "@/app/assets/images/cards/adidasCard.png";
 import giftCard from "@/app/assets/images/home/giftcard.jpeg";
+import { useState } from "react";
+import ContactModal from "./coponents/ContactModal";
+import ReviewModal from "./coponents/ReviewModal";
 
 const sliderImages = [card, adidasCard, giftCard];
 
 const CardDetails = () => {
+  const [contactOpen, setContactOpen] = useState(false);
+  const [reviewOpen, setReviewOpen] = useState(false);
+
+  const showContactModal = () => {
+    setContactOpen(true);
+  };
+  const showReviewModal = () => {
+    setReviewOpen(true);
+  };
   return (
     <div className="flex flex-col items-center h-screen overflow-y-auto overflow-x-clip relative w-full">
       <Header />
@@ -53,7 +65,6 @@ const CardDetails = () => {
                   )}
                   customPaging={function (index) {
                     const src = sliderImages[index]?.src;
-                    console.log(src);
                     return (
                       <a
                         style={{ backgroundImage: `url(${src})` }}
@@ -120,7 +131,7 @@ const CardDetails = () => {
                           <Button size="large">
                             <Image src={telegram} alt="Telegram" />
                           </Button>
-                          <Button size="large">
+                          <Button size="large" onClick={showContactModal}>
                             {parse(
                               feather.icons["more-horizontal"].toSvg({
                                 class: "",
@@ -350,7 +361,12 @@ const CardDetails = () => {
                         by leaving a review.
                       </p>
                     </div>
-                    <Button type="primary" size="large" className="text-nowrap">
+                    <Button
+                      type="primary"
+                      size="large"
+                      className="text-nowrap"
+                      onClick={showReviewModal}
+                    >
                       Leave a Review
                     </Button>
                   </div>
@@ -404,7 +420,7 @@ const CardDetails = () => {
                       <Button size="large">
                         <Image src={telegram} alt="Telegram" />
                       </Button>
-                      <Button size="large">
+                      <Button size="large" onClick={showContactModal}>
                         {parse(
                           feather.icons["more-horizontal"].toSvg({ class: "" })
                         )}
@@ -741,6 +757,8 @@ const CardDetails = () => {
           </div>
         </div>
       </div>
+      <ContactModal setOPen={setContactOpen} open={contactOpen} />
+      <ReviewModal setOPen={setReviewOpen} open={reviewOpen} />
       <Footer />
     </div>
   );
