@@ -41,3 +41,8 @@ div.ant-segmented-group {
 span.ant-input-wrapper > span.ant-input-group-addon {
   background: white;
 }
+
+div.slick-dots.slick-dots-bottom > ul > li,
+div.slick-dots.slick-dots-bottom > ul > li.slick-active {
+  width: 100%;
+}

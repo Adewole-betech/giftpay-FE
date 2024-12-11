@@ -156,6 +156,9 @@ export default function AllProvider({ children }) {
                 contentPadding: "16px 4px 32px 16px!important",
                 headerPadding: "16px 16px",
               },
+              Rate: {
+                colorFill: "rgb(253, 176, 34)",
+              },
             },
           }}
         >
