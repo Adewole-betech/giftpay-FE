@@ -46,3 +46,35 @@ div.slick-dots.slick-dots-bottom > ul > li,
 div.slick-dots.slick-dots-bottom > ul > li.slick-active {
   width: 100%;
 }
+
+div.ql-editor {
+  font-size: 16px;
+  font-family: var(--font-graphik);
+  height: 10rem;
+}
+
+div.ant-upload-list.ant-upload-list-picture-card {
+  margin-top: 1rem;
+  display: grid !important;
+  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+div.ant-upload-list.ant-upload-list-picture-card
+  > div.ant-upload-list-item-container {
+  width: 100% !important;
+  height: auto !important;
+}
+
+span.ant-upload-wrapper.ant-upload-picture-card-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  div.ant-upload-list.ant-upload-list-picture-card {
+    margin-top: 1.5rem;
+    gap: 3rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

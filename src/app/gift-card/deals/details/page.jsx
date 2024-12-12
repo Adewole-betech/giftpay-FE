@@ -70,13 +70,6 @@ const CardDetails = () => {
                         style={{ backgroundImage: `url(${src})` }}
                         className={`bg-cover bg-no-repeat bg-center w-full h-20 md:h-28 xl:h-32 rounded-md flex`}
                       ></a>
-                      // <a className="w-1/3">
-                      //   <img
-                      //     alt="Cards"
-                      //     src={sliderImages[index]?.src}
-                      //     className="w-full h-auto"
-                      //   />
-                      // </a>
                     );
                   }}
                 >

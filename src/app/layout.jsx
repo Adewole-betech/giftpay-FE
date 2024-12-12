@@ -3,6 +3,7 @@ import "./globals.css";
 import "feather-icons/dist/feather";
 import AllProvider from "./layoutComponents/LayoutContainer";
 import { NavigationProvider } from "./layoutComponents/contexts/contexts";
+import hljs from "highlight.js";
 
 const graphik = localFont({
   src: [
@@ -120,6 +121,12 @@ export default function RootLayout({ children }) {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+          rel="stylesheet"
+        />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
       </head>
       <body
         className={`${graphik.variable} antialiased font-graphik`}
