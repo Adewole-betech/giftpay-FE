@@ -105,7 +105,7 @@ const MyPasswords = () => {
         </div>
         <Form.Item>
           <div className="flex items-center justify-end gap-2 lg:gap-3">
-            <Button size="large" onClick={() => passwordForm.resetFields()}>
+            <Button size="large" onClick={() => pinForm.resetFields()}>
               Cancel
             </Button>
             <Button size="large" type="primary" htmlType="submit">
