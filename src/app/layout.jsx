@@ -129,7 +129,7 @@ export default function RootLayout({ children }) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
       </head>
       <body
-        className={`${graphik.variable} antialiased font-graphik`}
+        className={`${graphik.variable} antialiased font-graphik bg-[#fcfcfd]`}
         suppressHydrationWarning={true}
       >
         <AllProvider>
