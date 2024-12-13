@@ -4,6 +4,8 @@ import Listings from "@/app/gift-card/deals/seller/components/Listings";
 import { Button, Tabs } from "antd";
 import * as feather from "feather-icons/dist/feather";
 import parse from "html-react-parser";
+import MyReviews from "./components/Reviews";
+import MyPasswords from "./components/Passwords";
 
 const MyProfile = () => {
   return (
@@ -14,10 +16,10 @@ const MyProfile = () => {
       <Tabs
         items={[
           { key: "1", label: "Personal Information" },
-          { key: "2", label: "My Reviews" },
+          { key: "2", label: "My Reviews", children: <MyReviews /> },
           { key: "3", label: "Payments" },
           { key: "4", label: "Payouts" },
-          { key: "5", label: "Passwords" },
+          { key: "5", label: "Passwords", children: <MyPasswords /> },
         ]}
       />
     </div>
